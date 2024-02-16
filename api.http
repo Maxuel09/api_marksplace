@@ -1,0 +1,17 @@
+### get all user
+GET http://localhost:3000/users
+
+### get user
+GET http://localhost:3000/users/3
+
+### post user
+
+POST http://localhost:3000/users
+```json
+{
+    "name_user": "Pepito",
+    "last_name": "KLK",
+    "gmail_user": "klkP@example.com",
+    "age_user": "44"
+}
+````
