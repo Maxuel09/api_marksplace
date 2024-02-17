@@ -15,9 +15,8 @@ export const Usermodel = {
     
     createUser: async (req, res) => {
         const { name_user, last_name, gmail_user, age_user } = req.body;
-        const [rows] = await db.query(`INSERT INTO users (name_user, last_name, gmail_user, age_user) VALUES ('${name_user}', '${last_name}', '${gmail_user}', '${age_user}')`);
+        const [rows] = await db.query("INSERT INTO users (name_user, last_name, gmail_user, age_user) VALUES (?, ?, ?, ?)", [name_user, last_name, gmail_user, age_user]);
         return rows;
-        
     },
     
     updateUser: async (req, res) => {
